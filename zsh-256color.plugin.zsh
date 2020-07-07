@@ -3,13 +3,11 @@
 # Set 256color terminal mode if available.
 
 
-_zsh_256color_debug()
-{
+_zsh_256color_debug() {
 	[[ -n "${ZSH_256COLOR_DEBUG}" ]] && echo "zsh-256color: $@" >&2
 }
 
-_zsh_terminal_set_256color()
-{
+_zsh_terminal_set_256color() {
 	if [[ "$TERM" =~ "-256color$" ]] ; then
 		_zsh_256color_debug "256 color terminal already set."
 		return
